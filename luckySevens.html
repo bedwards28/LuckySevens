@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lucky Sevens</title>
+        <script type="text/javascript" src="luckySevens.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Lucky Sevens</h1>
+
+            <form name="gameForm" onSubmit="return playGame();">
+                <div class="form-group row">
+                    <label for="startingBetInput" class="col-sm-2 col-sm-offset-3 col-form-label text-right">Starting Bet</label>
+                    <div class="col-sm-2">
+                        <input id="startingBetInput" class="form-control" 
+                            type="number">
+                    </div>
+                    <div class="col-sm-5"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-5">
+                        <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="results" style="display:none;">
+                <table id="gameResults" class="table table-striped table-bordered table-hover row">
+                    <caption class="text-center">Results</caption>
+                    <tr>
+                        <td>Starting Bet</td>
+                        <td><span id="startingBet"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Rolls Before Going Broke</td>
+                        <td><span id="totalRolls"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Highest Amount Won</td>
+                        <td><span id="mostWon"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Roll Count at Highest Amount Won</td>
+                        <td><span id="mostWonRollCount"></span></td>
+                    </tr>
+                </table>
+
+                <div id="gameOverMessage" class="row">
+                    <h3>You are out of money! Enter a new starting bet amount to play again.</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
